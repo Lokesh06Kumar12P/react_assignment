@@ -1,0 +1,96 @@
+/* Navbar base styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007bff;
+  color: white;
+  padding: 12px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+/* Navigation menu */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: #dcdcdc;
+}
+
+/* Buttons */
+.nav-btn {
+  padding: 8px 14px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-btn {
+  background-color: white;
+  color: #007bff;
+}
+
+.login-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.signup-btn {
+  background-color: #0056b3;
+  color: white;
+}
+
+.signup-btn:hover {
+  background-color: #003d80;
+}
+
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #007bff;
+    width: 100%;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 0;
+    display: none;
+  }
+
+  .nav-menu.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}

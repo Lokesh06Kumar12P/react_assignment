@@ -1,0 +1,201 @@
+.blog-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  max-height: calc((250px + 20px) * 2); /* card height + gap, times 2 rows */
+  overflow: hidden;
+}
+
+.blog-card {
+  background-color: #f5f5f5;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: left;
+  position: relative;
+  padding-bottom: 50px; /* space for the button */
+}
+
+.blog-card h3 {
+  margin: 0 0 5px;
+}
+
+.blog-card h5 {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.blog-card > button {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  margin: 0;
+  padding: 4px 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.pagination {
+  margin-top: 20px;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 6px 12px;
+  cursor: pointer;
+  border: 1px solid #007bff;
+  background-color: white;
+  color: #007bff;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.pagination .active {
+  font-weight: bold;
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+.blog-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.blog-popup-content {
+  background: #fff;
+  padding: 20px 25px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 90%;
+  text-align: left;
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.blog-popup-content input,
+.blog-popup-content textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 10px 0 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  resize: vertical;
+}
+
+.blog-popup-content button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  float: right;
+  transition: background-color 0.3s ease;
+}
+
+.blog-popup-content button:hover {
+  background-color: #0056b3;
+}
+
+.blog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.blog-header h2 {
+  flex: 1;
+  text-align: center;
+  margin: 0;
+}
+
+.add-button {
+  padding: 8px 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+  background-color: #218838;
+}
+
+.blog-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.blog-title-row h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.blog-title-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.blog-title-actions button {
+  padding: 4px 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+
+.feedback-popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  z-index: 1000;
+  animation: fadeInOut 2s ease-out;
+}
+
+.feedback-popup.success {
+  background-color: #28a745;
+}
+
+.feedback-popup.error {
+  background-color: #dc3545;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(20px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(20px); }
+}
