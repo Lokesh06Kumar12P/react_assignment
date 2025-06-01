@@ -12,7 +12,7 @@ const Blog = ({ ADD, Id , refresh , setrefresh }) => {
   const blogsPerPage = 8;
 
   useEffect(() => {
-    fetch(`http://localhost:8080/auth/My_Blogs?i=${Id}`)
+    fetch(`https://spring-assig-5.onrender.com/auth/My_Blogs?i=${Id}`)
       .then(response => {
         if (!response.ok) {
           throw new Error('Failed to fetch blogs');
@@ -32,7 +32,7 @@ const Blog = ({ ADD, Id , refresh , setrefresh }) => {
 
   const handleDelete = async (id, title) => {
   try {
-    const response = await fetch('http://localhost:8080/auth/My_Blogs/Delete', {
+    const response = await fetch('https://spring-assig-5.onrender.com/auth/My_Blogs/Delete', {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
@@ -79,7 +79,7 @@ const Blog = ({ ADD, Id , refresh , setrefresh }) => {
 
 
   const handleEditSave = () => {
-    fetch(`http://localhost:8080/auth/My_Blogs/Edit`, {
+    fetch(`https://spring-assig-5.onrender.com/auth/My_Blogs/Edit`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
@@ -119,7 +119,7 @@ const Blog = ({ ADD, Id , refresh , setrefresh }) => {
 
   const handleAdd = async (newBlog) => {
   try {
-    const response = await fetch('http://localhost:8080/auth/My_Blogs/Add', {
+    const response = await fetch('https://spring-assig-5.onrender.com/auth/My_Blogs/Add', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

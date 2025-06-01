@@ -7,7 +7,7 @@ function Signup() {
   const [password, setPassword] = useState('');
   const [signedUpUser, setSignedUpUser] = useState(null);  // to track signup success
 
-  const API_BASE_URL = "http://localhost:8080/auth";
+  const API_BASE_URL = "https://spring-assig-5.onrender.com/auth";
 
   async function signup(user) {
     try {

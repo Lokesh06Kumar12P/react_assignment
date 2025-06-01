@@ -8,7 +8,7 @@ const Blog = ({ refresh }) => {
   const blogsPerPage = 8;
 
   useEffect(() => {
-    fetch(`http://localhost:8080/auth/Home`)
+    fetch(`https://spring-assig-5.onrender.com/auth/Home`)
       .then(response => {
         if (!response.ok) {
           throw new Error('Failed to fetch blogs');

@@ -7,7 +7,7 @@ function Login({ onLoginSuccess, close }) {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  const API_BASE_URL = "http://localhost:8080/auth";
+  const API_BASE_URL = "https://spring-assig-5.onrender.com/auth";
 
   const handleLogin = async (e) => {
     e.preventDefault();
